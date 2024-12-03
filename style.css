@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.u-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.u-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+button{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    width: 250px;
+    height: 50px;
+    background: none;
+    border-radius: 20px;
+    border-width: 12px;
+    border: 1px solid #009CDF;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.d-f{
+    display: flex;
+}
+
+.s-b{
+    justify-content: space-between
+}
+
+.a-i_c{
+    align-items: center;
+}
+
+.f-d_c{
+    flex-direction: column;
+}
+
+.j-c_c{
+    justify-content: center;
+}
+
+header{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: black;
+}
+
+.header-top{
+    width: 1330px;
+    padding: 16px 0;
+    border-bottom: 1px solid white;
+}
+
+.block-social{
+    gap: 1.3em;
+}
+
+.header-top > p{
+    font-size: 15px;
+}
+
+.header-top > button{
+    font-size: 18px;
+    width: 9.5em;
+    height: 2.5em;
+}
+
+.header-bottom{
+    width: 1330px;
+    gap: 4em;
+    padding: 37px 0;
+}
+
+.welcome{
+    background-image: url('/img/background-welcome.png');
+    background-position: right;
+    /* background-size:cover; */
+}
+.about-us{
+    background-image: url('/img/background-about.png');
+}
+.about-us__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три столбца одинаковой ширины */
+    grid-template-rows: repeat(2, auto); /* Две строки */
+    gap: 10px; /* Отступы между элементами */
+}
+
+.about-us__blocks > div {
+    background-color: #f0f0f0; /* Цвет фона для визуализации элементов */
+    padding: 20px; /* Внутренний отступ для элементов */
+    box-sizing: border-box; /* Учитывает padding в ширине и высоте */
+}
+
+.large {
+    grid-row: span 2; /* Занимает две строки */
+}
+
+.about-us__blocks > div:nth-child(1){
+    background-image: url('img/background-about-us__first.svg');
+}
+
+.about-us__blocks > div:nth-child(2){
+    background-image: url('img/background-about-us__second.svg');
+}
+
+.about-us__blocks > div:nth-child(3){
+    background-image: url('img/background-about-us__third.svg');
+}
+
+.about-us__blocks > div:nth-child(4){
+    background-image: url('img/background-about-us__foutrh.svg');
+}
+
+.about-us__blocks > div:nth-child(5){
+    background-image: url('img/background-about-us__fifth.svg');
+}
+
+.about-us__blocks > div > p:first-child{
+    font-size: 64px;
+    font-weight: 700;
+}
