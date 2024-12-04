@@ -79,7 +79,7 @@ header{
     font-size: 15px;
 }
 
-.header-top > button{
+.header-top > a > button{
     font-size: 18px;
     width: 9.5em;
     height: 2.5em;
