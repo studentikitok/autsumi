@@ -205,59 +205,51 @@ header{
 }
 
 .about-us__blocks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Три столбца одинаковой ширины */
-    grid-template-rows: repeat(2, auto); /* Две строки */
-    gap: 10px; /* Отступы между элементами */
+    
 }
 
-.about-us__blocks > div {
+.about-us__blocks > div > div {
     width: 425px;
     height: 300px;
     border-radius: 20px;
-    background-repeat: no-repeat; /* Не повторять изображение */
-    background-size: contain; /* Изображение полностью помещается в блок */
+    background-repeat: no-repeat;
     text-align: center;
 }
 
-.large {
-    grid-row: span 2; /* Занимает две строки */
+.about-us__blocks > div > div > p{
+    max-width: 250px;
+    font-size: 20px;
+}
+
+.about-us__blocks > div > div > button {
+    border-color: white;
+    height: 55px;
+}
+
+.about-us__blocks > div:first-child > div:nth-child(1){
+    background-image: url('img/background-about-us__first.svg');
+}
+
+.about-us__blocks > div:first-child > div:nth-child(2){
+    background-image: url('img/background-about-us__second.svg');
+}
+
+.about-us__blocks > div:nth-child(2) > div:nth-child(1){
+    background-image: url('img/background-about-us__third.svg');
+}
+
+.about-us__blocks > div:nth-child(2) > div:nth-child(2){
+    background-image: url('img/background-about-us__foutrh.svg');
+}
+
+.about-us__blocks > div:nth-child(3) > div:nth-child(1){
+    background-image: url('img/background-about-us__fifth.svg');
     width: 656px;
     height: 648px;
     text-align: left;
 }
 
-.about-us__blocks > div > p{
-    max-width: 250px;
-    font-size: 20px;
-}
-
-.about-us__blocks > div > button {
-    border-color: white;
-    height: 55px;
-}
-
-.about-us__blocks > div:nth-child(1){
-    background-image: url('img/background-about-us__first.svg');
-}
-
-.about-us__blocks > div:nth-child(2){
-    background-image: url('img/background-about-us__second.svg');
-}
-
-.about-us__blocks > div:nth-child(3){
-    background-image: url('img/background-about-us__third.svg');
-}
-
-.about-us__blocks > div:nth-child(4){
-    background-image: url('img/background-about-us__foutrh.svg');
-}
-
-.about-us__blocks > div:nth-child(5){
-    background-image: url('img/background-about-us__fifth.svg');
-}
-
-.about-us__blocks > div > p:first-child{
+.about-us__blocks > div > div > p:first-child{
     font-size: 64px;
     font-weight: 700;
 }
