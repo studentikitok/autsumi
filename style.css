@@ -75,8 +75,9 @@ header{
 }
 /* Разобраться с адаптацией шапки */
 .header-top{
-    width: 1330px;
+    /* width: 1330px; */
     padding: 16px 0;
+    margin: 0 calc(590px / 2);
     border-bottom: 1px solid white;
 }
 
@@ -95,7 +96,7 @@ header{
 }
 
 .header-bottom{
-    max-width: 1330px;
+    /* max-width: 1330px; */
     gap: 4em;
     padding: 37px 0;
 }
@@ -107,8 +108,8 @@ header{
 .welcome{
     background-image: url('/img/background-welcome.png');
     background-position: right;
-    background-size:cover;
-    /* height: max-content; */
+    background-repeat: no-repeat;
+    height: 773px;
 }
 
 .welcome > div > h1{
@@ -120,6 +121,11 @@ header{
 .welcome > div > p{
     max-width: 520px;
     font-size: 18px;
+    margin: 32px 0 66px 0px;
+}
+
+.wedding-planning{
+    margin-top: 164px;
 }
 
 .wedding-planning-inside{
@@ -165,7 +171,8 @@ header{
 
 .wedding-planning-outside{
     gap: 20px;
-
+    position: relative;
+    top: -66px;
 }
 
 .wedding-planning-outside__block{
@@ -178,17 +185,23 @@ header{
 }
 
 .wedding-planning-outside__block > img{
-    margin: 10px;
+    margin: 25px 0 10px 0;
     height: 42px;
 }
 
 .wedding-planning-outside__block > p {
     font-size: 20px;
     text-align: center;
+    max-width: 225px;
 }
 
 .about-us{
     background-image: url('/img/background-about.png');
+    /* задник круглежки сделать */
+}
+
+.about-us > h2 {
+    text-align: center;
 }
 
 .about-us__blocks {
@@ -199,13 +212,29 @@ header{
 }
 
 .about-us__blocks > div {
-    background-color: #f0f0f0; /* Цвет фона для визуализации элементов */
-    padding: 20px; /* Внутренний отступ для элементов */
-    box-sizing: border-box; /* Учитывает padding в ширине и высоте */
+    width: 425px;
+    height: 300px;
+    border-radius: 20px;
+    background-repeat: no-repeat; /* Не повторять изображение */
+    background-size: contain; /* Изображение полностью помещается в блок */
+    text-align: center;
 }
 
 .large {
     grid-row: span 2; /* Занимает две строки */
+    width: 656px;
+    height: 648px;
+    text-align: left;
+}
+
+.about-us__blocks > div > p{
+    max-width: 250px;
+    font-size: 20px;
+}
+
+.about-us__blocks > div > button {
+    border-color: white;
+    height: 55px;
 }
 
 .about-us__blocks > div:nth-child(1){
@@ -231,4 +260,109 @@ header{
 .about-us__blocks > div > p:first-child{
     font-size: 64px;
     font-weight: 700;
+}
+
+.feedback-form{
+    background: linear-gradient(to bottom, #009CDF 0%, #025D85 100%); /* Линейный градиент */
+
+}
+
+.feedback-form > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 1330px;
+}
+
+.feedback-form > p {
+    text-align: center;
+    font-size: 20px;
+    max-width: 790px;
+}
+
+.feedback-form > form > input{
+    border: none;
+    border-bottom: 1px solid #A3A3A3;
+    background-color: transparent;
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: #A3A3A3;
+    width: 405px;
+}
+
+.feedback-form > form > input::placeholder{
+    color: #A3A3A3;
+    font-size: 20px;
+}
+
+.feedback-form > form > button {
+    border-color: white;
+    height: 65px;
+}
+
+.indispensable{
+    background-image: url('img/background-indispensable.svg');
+}
+
+
+
+
+
+
+
+.auth{
+    border: 1px solid white;
+    max-width: 556px;
+}
+
+.close-button{
+    margin: 20px 20px 13px 0;
+    justify-content: flex-end;
+}
+
+.auth-block > p{
+    font-size: 24px;
+    margin: 0 53px;
+    font-weight: 700;
+}
+
+.auth-block > form{
+    margin: 50px 53px 23px 53px;
+    gap: 26px;
+}
+
+.auth-block > form > input{
+    padding-left: 19px;
+}
+
+.auth-block > form > input {
+    font-size: 16px;
+    width: 431px;
+    height: 55px;
+    border: none;
+}
+
+.auth-block > form > button {
+    width: 450px;
+    height: 55px;
+    border: none;
+    background: linear-gradient(to bottom, #009CDF 0%, #09003E 100%);
+    border-radius: 0;
+}
+
+.remember{
+    gap: 1em;
+}
+
+.remember > input {
+    width: 26px;
+    height: 24px;
+}
+
+.remember-and-forgot{
+    margin: 0 53px;
+}
+
+.down-button{
+    gap: 1em;
+    margin: 98px 0 32px 0;
 }
