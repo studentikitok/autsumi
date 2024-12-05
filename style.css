@@ -30,6 +30,15 @@ button{
     border-radius: 20px;
     border-width: 12px;
     border: 1px solid #009CDF;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2{
+    font-size: 36px;
 }
 
 a{
@@ -64,7 +73,7 @@ header{
     z-index: 100;
     background-color: black;
 }
-
+/* Разобраться с адаптацией шапки */
 .header-top{
     width: 1330px;
     padding: 16px 0;
@@ -86,19 +95,102 @@ header{
 }
 
 .header-bottom{
-    width: 1330px;
+    max-width: 1330px;
     gap: 4em;
     padding: 37px 0;
+}
+
+.container {
+    padding: 0 160px;
 }
 
 .welcome{
     background-image: url('/img/background-welcome.png');
     background-position: right;
-    /* background-size:cover; */
+    background-size:cover;
+    /* height: max-content; */
 }
+
+.welcome > div > h1{
+    max-width: 655px;
+    background: linear-gradient(to bottom, #025D85 0%, #009CDF 100%); /* Линейный градиент */
+    -webkit-text-fill-color: transparent; /* Прозрачный цвет текста для WebKit-браузеров */
+    background-clip: text; /* Обрезка фона по тексту для других браузеров */
+}
+.welcome > div > p{
+    max-width: 520px;
+    font-size: 18px;
+}
+
+.wedding-planning-inside{
+    background-image: url('img/background-wedding-planning.png');
+    width: 100%;
+    height: 611px;
+    background-repeat: no-repeat; /* Не повторять изображение */
+    background-size: contain; /* Изображение полностью помещается в блок */
+}
+
+.wedding-planning-inside__container{
+    padding: 6em 0px 0px 8em;
+}
+.wedding-planning-inside__container > p {
+    font-size: 24px;
+    margin-top: 37px;
+    max-width: 653px;
+}
+
+.wedding-planning-inside__container > h1{
+    width: 387px;
+}
+
+.wedding-planning-buttons{
+    gap: 54px;
+    /* em */
+    margin-top: 56px;
+}
+
+.wedding-planning-buttons > button{
+    font-size: 20px;
+}
+
+.wedding-planning-buttons > button:first-child{
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.wedding-planning-buttons > button:last-child{
+    border: 1px solid white;
+}
+
+.wedding-planning-outside{
+    gap: 20px;
+
+}
+
+.wedding-planning-outside__block{
+    width: 384px;
+    height: 172px; 
+    /* перевести в ем */
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+.wedding-planning-outside__block > img{
+    margin: 10px;
+    height: 42px;
+}
+
+.wedding-planning-outside__block > p {
+    font-size: 20px;
+    text-align: center;
+}
+
 .about-us{
     background-image: url('/img/background-about.png');
 }
+
 .about-us__blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Три столбца одинаковой ширины */
