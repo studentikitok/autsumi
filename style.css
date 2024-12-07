@@ -3,9 +3,6 @@
     padding: 0;
 }
 
-/* адаптив под 1217 */
-/*  */
-/*  */
 body {
     font-family: 'Ubuntu', sans-serif;
     color: white;
@@ -82,7 +79,6 @@ header {
     padding: 0 calc((100% - 1330px) / 2);
 }
 
-/* Разобраться с адаптацией шапки */
 .header-top {
     padding: 16px 0;
     border-bottom: 1px solid white;
@@ -107,6 +103,62 @@ header {
     gap: 4em;
     padding: 37px 0;
 }
+
+.burger-menu {
+    display: none;
+    /* Скрываем бургер-меню по умолчанию */
+    cursor: pointer;
+}
+
+.line {
+    width: 19px;
+    /* Ширина полосок */
+    height: 1.6px;
+    /* Высота полосок */
+    background-color: #009CDF;
+    /* Цвет полосок */
+    margin: 2.8px 0;
+    /* Отступ между полосками */
+    transition: all 0.3s ease;
+    /* Плавный переход для анимации */
+}
+
+/* Выпадающее меню */
+.dropdown-menu {
+    display: none;
+    /* Скрываем выпадающее меню по умолчанию */
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    /* Позиционируем меню над другими элементами */
+    top: 75%;
+    /* Сразу под шапкой */
+    right: 0;
+    /* Занимает правую сторону */
+    border: 1px solid white;
+    width: 150px;
+    height: 205px;
+    margin: 0 calc((100% - 350px) / 2);
+    padding: 28px 30px;
+}
+
+.dropdown-contact {
+    gap: 16px;
+    font-size: 15px;
+}
+
+.dropdown-links {
+    gap: 14px;
+}
+
+.dropdown-links a {
+    font-size: 15px;
+}
+
+.header-top>input {
+    display: none;
+}
+
 
 .container {
     padding: 0 calc((100% - 1600px) / 2);
@@ -420,6 +472,10 @@ footer>p {
     margin-bottom: 65px;
 }
 
+.footer-hiden {
+    display: none;
+}
+
 footer>p,
 .footer-bottom>p:first-child,
 .footer-bottom>p:last-child {
@@ -587,6 +643,71 @@ footer>p,
 }
 
 @media (max-width: 900px) {
+    header {
+        padding: 0 calc((100% - 350px) / 2);
+
+    }
+
+    .header-top {
+        padding: 22px 0;
+    }
+
+    .header-bottom,
+    .header-top>a,
+    .header-top>p,
+    .header-top>a>button {
+        display: none;
+        /* Скрываем элементы шапки при ширине менее 900px */
+    }
+
+    .burger-menu {
+        display: flex;
+        margin-left: auto;
+        /* Показываем бургер-меню */
+    }
+
+    #menu-toggle:checked~.dropdown-menu {
+        display: flex;
+        /* Показываем выпадающее меню при активном состоянии чекбокса */
+        gap: 16px;
+    }
+
+    #menu-toggle:checked + .burger-menu .line:nth-child(1) {
+        width: 25px;
+        transform: rotate(45deg); /* Первая линия поворачивается на 45 градусов */
+        margin-top: 0; /* Убираем отступ между первой и второй линией */
+        margin-bottom: 0; /* Убираем отступ между первой и второй линией */
+    }
+
+    #menu-toggle:checked + .burger-menu .line:nth-child(2) {
+        opacity: 0; /* Вторая линия исчезает */
+        height: 0;   /* Убираем высоту второй линии для лучшего эффекта */
+        margin: 0;   /* Убираем отступы у второй линии */
+    }
+
+    #menu-toggle:checked + .burger-menu .line:nth-child(3) {
+        width: 25px;
+        transform: rotate(-45deg); /* Третья линия поворачивается на -45 градусов */ 
+        margin-top: 0; /* Убираем отступ между третьей и второй линией */
+        margin-bottom: 0; /* Убираем отступ между третьей и второй линией */
+    }
+
+    .block-social {
+        height: 16px;
+        gap: 16px;
+    }
+
+    .icon-social {
+        height: 16px
+    }
+
+    .logo {
+        margin-left: 73px;
+        margin-right: 137px;
+        width: 38px;
+        height: 36px;
+    }
+
     button {
         border-radius: 10px;
     }
@@ -599,7 +720,7 @@ footer>p,
         align-items: flex-start;
         background-size: contain;
         background-position: bottom;
-        height: 552px;
+        height: 505px;
     }
 
     .welcome>div {
@@ -615,7 +736,7 @@ footer>p,
     }
 
     .welcome>div>p {
-        font-size: 18px;
+        font-size: 14px;
         margin: 20px 0 35px 0px;
         text-align: center;
     }
@@ -818,8 +939,9 @@ footer>p,
     footer {
         padding-top: 28px;
         padding-bottom: 0px;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
+        background-image: url('img/background-footer-small.svg');
     }
 
     .footer-top {
@@ -868,4 +990,64 @@ footer>p,
     }
 }
 
-разобраться с футером в адаптиве
+.services-blocks {
+    padding: 0 calc((100% - 1330px) / 2);
+    gap: 41px;
+}
+
+.services-block {
+    display: grid;
+    grid-template-columns: 22% 78%;
+    padding: 36px 43px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.services-blocks>.services-block:nth-child(1) {
+    background-image: url('img/background-catering.svg');
+    width: 558px;
+    height: 228px;
+}
+
+.services-block>.services-block-border:nth-child(1) {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    position: relative;
+}
+
+.services-block>.services-block-border:nth-child(2) {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.services-block-border>p {
+    position: absolute;
+    bottom: -7px;
+    left: 18px;
+}
+
+.services-blocks>.services-block:nth-child(2) {
+    background-image: url('img/background-ceremonies.svg');
+    width: 558px;
+    height: 228px;
+}
+
+.services-blocks>.services-block:nth-child(3) {
+    background-image: url('img/background-suits.svg');
+    width: 515px;
+    height: 348px;
+}
+
+.services-blocks>.services-block:nth-child(4) {
+    background-image: url('img/background-organization.svg');
+    width: 600px;
+    height: 348px;
+}
+
+.services-blocks>.services-block:nth-child(5) {
+    background-image: url('img/background-photozone.svg');
+    width: 1244px;
+    height: 228px;
+    grid-template-columns: 34% 66%;
+}
