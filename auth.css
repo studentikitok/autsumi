@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+@media(max-width:600px) {
+    .auth {
+        width: 350px;
+        font-size: 14px;
+    }
+    .close-button{
+        margin: 10px 10px 5px 0;
+    }
+    .auth-block>p{
+        font-size: 18px;
+        margin: 0 33px;
+    }
+    .auth-block>form{
+        margin: 20px 33px;
+        gap: 15px;
+    }
+    .auth-block>form> input{
+        width: calc(100% - 5px);
+        padding-left: 5px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .auth-block>form>button {
+        width: 233px;
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .remember-and-forgot {
+        margin: 0 33px;
+    }
+    .remember>input{
+        width: 16px;
+        height: 14px;
+    }
+    .down-button{
+        margin: 35px 0 15px;
+    }
+}
