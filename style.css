@@ -1915,7 +1915,7 @@ footer>p,
         background: url('img/background-catalog-small.svg');
         background-repeat: no-repeat;
         /* Если надо для скрина под разрешение 480, используй background-size: contain, а так советую background-size: cover */
-        background-size: contain; 
+        background-size: contain;
         background-position: bottom;
         padding-bottom: 209px;
     }
