@@ -1,0 +1,96 @@
+body {
+    background-color: white;
+    color: black;
+    text-align: center
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+.error {
+    height: calc(100vh - 60px);
+}
+
+.error>h1 {
+    font-weight: 500;
+    font-size: 128px;
+    margin-top: 164px;
+    margin-bottom: 53px;
+}
+
+.error>p:first-of-type {
+    font-size: 48px;
+    margin-bottom: 53px;
+}
+
+.error>p:last-of-type {
+    font-size: 36px;
+}
+
+.error>img {
+    margin-top: auto;
+}
+
+.error>a {
+    margin-bottom: auto;
+    margin-top: 46px;
+}
+
+.error>a>button {
+    width: 296px;
+    height: 54px;
+    border: 1px solid #666666;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    font-size: 16px;
+    margin-bottom: auto;
+    color: black;
+}
+
+@media(max-width: 1000px) {
+    .error {
+        padding: 0 calc((100% - 600px) / 2);
+    }
+}
+
+@media(max-width: 650px) {
+    .error {
+        height: calc(100vh - 335px);
+        padding: 0 calc((100% - 401px) / 2);
+    }
+
+    .error {
+        height: calc(100vh - 60px);
+    }
+
+    .error>h1 {
+        font-size: 64px;
+        margin-top: 142px;
+        margin-bottom: 32x;
+    }
+
+    .error>p:first-of-type {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .error>p:last-of-type {
+        font-size: 16px;
+        max-width: 312px;
+    }
+
+    .error>img {
+        margin-top: 20px;
+        width: 81px;
+        height: 81px;
+    }
+
+    .error>a {
+        margin-top: 76px;
+    }
+
+    .error>a>button {
+        width: 220px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
